@@ -1,0 +1,31 @@
+﻿<Window x:Class="_122_Fedchenko.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_122_Fedchenko"
+        mc:Ignorable="d"
+        Title="Учебная практика" Height="560" Width="965" Loaded="Window_Loaded" Closing="Window_Closing">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height ="45"></RowDefinition>
+            <RowDefinition Height ="*"></RowDefinition>
+            <RowDefinition Height ="45"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Frame Grid.Row="1"
+               Navigated="Frame_Navigated"
+               x:Name="MainFrame"
+               NavigationUIVisibility="Hidden"></Frame>
+        <TextBlock x:Name="DateTimeNow" Margin="522,0,0,0" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Center" Grid.Column="1" Width="194" Height="35"></TextBlock>
+        <Button Content="Назад" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Center" Click="Button_Click"/>
+        <ComboBox HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged" x:Name="ThemeComboBox">
+            <ComboBoxItem Content="Темная"/>
+            <ComboBoxItem Content="Радостная"/>
+
+            
+        </ComboBox>
+
+    </Grid>
+</Window>
